@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+  <menuitem id="menu_dode_ca_lending" name="Lending Library" />
+  <menuitem id="menu_dode_ca_lending_configuration" name="Configuration" sequence="20" parent="menu_dode_ca_lending"/>
+</data>
+</openerp>
+

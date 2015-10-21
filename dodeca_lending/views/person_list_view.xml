@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+  <record model="ir.ui.view" id="view_dode_ca_person_list_form">
+    <field name="name">view.dode.ca.person.list.form</field>
+    <field name="model">dode.ca.person.list</field>
+    <field name="type">form</field>
+    <field name="arch" type="xml">
+      <form string="Person List">
+        <field name="name" />
+        <field name="owner_person_id" />
+        <field name="member_person_ids" nolabel="1" widget="one2many_list">
+          <tree string="Members">
+            <field name="name" />
+          </tree>
+        </field>
+      </form>
+    </field>
+  </record>
+
+  <record model="ir.ui.view" id="view_dode_ca_person_list_tree">
+    <field name="name">view.dode.ca.person.list.tree</field>
+    <field name="model">dode.ca.person.list</field>
+    <field name="type">tree</field>
+    <field name="arch" type="xml">
+      <tree string="Person List">
+        <field name="name" />
+      </tree>
+    </field>
+  </record>
+
+  <!-- ===========================================================
+       ACTIONS
+       =========================================================== -->
+
+  <record model="ir.actions.act_window" id="action_dode_ca_person_list">
+    <field name="name">People</field>
+    <field name="res_model">dode.ca.person.list</field>
+    <field name="view_type">form</field>
+    <field name="view_mode">tree,form</field>
+  </record>
+
+  <!-- ===========================================================
+       MENU ITEMS
+       =========================================================== -->
+
+  <menuitem name="People List"
+            id="menu_dode_ca_person_list"
+            action="action_dode_ca_person_list"
+            parent="menu_dode_ca_lending" />
+
+
+</data>
+</openerp>
+
